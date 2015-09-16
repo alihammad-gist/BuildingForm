@@ -1,5 +1,10 @@
 <?php
 return array(
+	'controllers' => array(
+		'invokables' => array(
+			'BuildingForm\Index' => 'BuildingForm\Controller\IndexController',
+			)
+		), 
 	'router'        => array(
 		'routes' => array(
 			'building-form' => array(
@@ -95,5 +100,13 @@ return array(
 			'BuildingForm\Step\BuildingType'   => 'BuildingForm\DefaultStep',
 			'BuildingForm\Step\BuildingBay'    => 'BuildingForm\DefaultStep',
 		),
+	),
+	'view_manager' => array(
+		'template_path_stack' => array(
+			'building-form' => __DIR__ . '/../view',
+		),
+		'template_map' => array(
+			'wizard/layout' => __DIR__ . '/../view/building-form/layout.phtml',
+		)
 	),
 );

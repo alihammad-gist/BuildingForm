@@ -10,7 +10,12 @@ class IndexController extends AbstractActionController
 
     public function indexAction()
     {
-        return new ViewModel();
+        $wizardFactory = $this->getServiceLocator()->get('Wizard\wizardFactory');
+
+        /* @var $wizard \Wizard\WizardInterface */
+        $wizard = $wizardFactory->create('building-form-wizard');
+
+        return $wizard->process();
     }
 
     public function cancelAction()

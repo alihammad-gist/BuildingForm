@@ -11,7 +11,7 @@ class BuildingSpec extends Form {
 	public function __construct() {
 		parent::__construct();
 
-		$form->add(array(
+		$this->add(array(
 			'type'    => 'radio',
 			'name'    => 'unit',
 			'options' => array(

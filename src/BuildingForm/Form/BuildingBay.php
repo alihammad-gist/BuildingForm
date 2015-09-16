@@ -4,7 +4,7 @@ namespace BuildingForm\Form;
 
 use Zend\Form\Form;
 
-class BuildingBays extends Form {
+class BuildingBay extends Form {
 
 	public function __construct() {
 		parent::__construct();
