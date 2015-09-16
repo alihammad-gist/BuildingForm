@@ -9,42 +9,46 @@ use Zend\Form\Form;
 class BuildingSpec extends Form {
 
 	public function __construct() {
-		parent::__construct();
+		parent::__construct('building-spec');
 
 		$this->add(array(
-			'type'    => 'radio',
-			'name'    => 'unit',
-			'options' => array(
+			'type'             => 'radio',
+			'name'             => 'unit',
+			'options'          => array(
 				'label'         => 'Unit Type',
 				'value_options' => array(
 					'Metric'   => 'Metric',
 					'Imperial' => 'Imperial',
 				),
 			),
+			'label_attributes' => array('class' => 'col-sm-2'),
 		));
 
 		$this->add(array(
-			'name'    => 'buildingWidth',
-			'type'    => 'text',
-			'options' => array(
+			'name'             => 'buildingWidth',
+			'type'             => 'text',
+			'options'          => array(
 				'label' => 'Building Width',
 			),
+			'label_attributes' => array('class' => 'col-sm-2'),
 		));
 
 		$this->add(array(
-			'name'    => 'buildingLength',
-			'type'    => 'text',
-			'options' => array(
+			'name'             => 'buildingLength',
+			'type'             => 'text',
+			'options'          => array(
 				'label' => 'Building Length',
 			),
+			'label_attributes' => array('class' => 'col-sm-2'),
 		));
 
 		$this->add(array(
-			'name'    => 'eavesHeight',
-			'type'    => 'text',
-			'options' => array(
+			'name'             => 'eavesHeight',
+			'type'             => 'text',
+			'options'          => array(
 				'label' => 'Eave Height',
 			),
+			'label_attributes' => array('class' => 'col-sm-2'),
 		));
 
 	}
@@ -78,9 +82,9 @@ class BuildingSpec extends Form {
 
 	private function setFieldsForRoofGable() {
 		$this->add(array(
-			'type'    => 'select',
-			'name'    => 'roofPitch',
-			'options' => array(
+			'type'             => 'select',
+			'name'             => 'roofPitch',
+			'options'          => array(
 				'label'         => 'Roof Pitch',
 				'value_options' => array(
 					'10'    => '10',
@@ -89,14 +93,15 @@ class BuildingSpec extends Form {
 					'Other' => 'Other',
 				),
 			),
+			'label_attributes' => array('class' => 'col-sm-2'),
 		));
 	}
 
 	private function setFieldsForRoofHip() {
 		$this->add(array(
-			'type'    => 'select',
-			'name'    => 'roofPitch',
-			'options' => array(
+			'type'             => 'select',
+			'name'             => 'roofPitch',
+			'options'          => array(
 				'label'         => 'Roof Pitch',
 				'value_options' => array(
 					'10'    => '10',
@@ -105,14 +110,15 @@ class BuildingSpec extends Form {
 					'Other' => 'Other',
 				),
 			),
+			'label_attributes' => array('class' => 'col-sm-2'),
 		));
 	}
 
 	private function setFieldsForRoofDutch() {
 		$this->add(array(
-			'type'    => 'select',
-			'name'    => 'roofPitch',
-			'options' => array(
+			'type'             => 'select',
+			'name'             => 'roofPitch',
+			'options'          => array(
 				'label'         => 'Roof Pitch',
 				'value_options' => array(
 					'10'    => '10',
@@ -121,14 +127,15 @@ class BuildingSpec extends Form {
 					'Other' => 'Other',
 				),
 			),
+			'label_attributes' => array('class' => 'col-sm-2'),
 		));
 	}
 
 	private function setFieldsForRoofAssymetric() {
 		$this->add(array(
-			'type'    => 'select',
-			'name'    => 'roofPitch',
-			'options' => array(
+			'type'             => 'select',
+			'name'             => 'roofPitch',
+			'options'          => array(
 				'label'         => 'Roof Pitch',
 				'value_options' => array(
 					'5'     => '5',
@@ -138,30 +145,33 @@ class BuildingSpec extends Form {
 					'Other' => 'Other',
 				),
 			),
+			'label_attributes' => array('class' => 'col-sm-2'),
 		));
 
 		$this->add(array(
-			'name'    => 'leftSpan',
-			'type'    => 'text',
-			'options' => array(
+			'name'             => 'leftSpan',
+			'type'             => 'text',
+			'options'          => array(
 				'label' => 'Left Span',
 			),
+			'label_attributes' => array('class' => 'col-sm-2'),
 		));
 
 		$this->add(array(
-			'name'    => 'rightSpan',
-			'type'    => 'text',
-			'options' => array(
+			'name'             => 'rightSpan',
+			'type'             => 'text',
+			'options'          => array(
 				'label' => 'Right Span',
 			),
+			'label_attributes' => array('class' => 'col-sm-2'),
 		));
 	}
 
 	private function setFieldsForRoofMono() {
 		$this->add(array(
-			'type'    => 'select',
-			'name'    => 'roofPitch',
-			'options' => array(
+			'type'             => 'select',
+			'name'             => 'roofPitch',
+			'options'          => array(
 				'label'         => 'Roof Pitch',
 				'value_options' => array(
 					'5'     => '5',
@@ -171,6 +181,7 @@ class BuildingSpec extends Form {
 					'Other' => 'Other',
 				),
 			),
+			'label_attributes' => array('class' => 'col-sm-2'),
 		));
 	}
 }

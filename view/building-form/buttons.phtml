@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * 
+ * @var \Wizard\Wizard
+ */
+$wizard  = $this->wizard;
+
+/**
+ * 
+ * @var \Wizard\Step\StepInterface
+ */
+$step = $wizard->getCurrentStep();
+
+?>
+
+<div class="btn-group btn-group-lg">
+	<button type="button" class="btn btn-default" onclick="document['<?php echo $form_name?>'].submit()">
+		Next
+	</button>
+</div>
+
+

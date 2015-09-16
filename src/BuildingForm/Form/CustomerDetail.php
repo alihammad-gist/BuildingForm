@@ -7,13 +7,15 @@ use Zend\Form\Form;
 class CustomerDetail extends Form {
 	public function __construct() {
 
-		parent::__construct();
+		parent::__construct('customer-detail');
 
 		$this->add(array(
 			'name'    => 'projectRef',
 			'type'    => 'text',
 			'options' => array(
-				'label' => 'Project Ref',
+				'column-size'      => 'sm-10',
+				'label'            => 'Project Ref',
+				'label_attributes' => array('class' => 'col-sm-2'),
 			),
 		));
 
@@ -21,7 +23,10 @@ class CustomerDetail extends Form {
 			'name'    => 'name',
 			'type'    => 'text',
 			'options' => array(
-				'label' => 'Name',
+				'column-size'      => 'sm-10',
+				'label'            => 'Name',
+				'label_attributes' => array('class' => 'col-sm-2'),
+
 			),
 		));
 
@@ -29,7 +34,9 @@ class CustomerDetail extends Form {
 			'name'    => 'addr',
 			'type'    => 'text',
 			'options' => array(
-				'label' => 'Address',
+				'column-size'      => 'sm-10',
+				'label'            => 'Address',
+				'label_attributes' => array('class' => 'col-sm-2'),
 			),
 		));
 
@@ -37,7 +44,9 @@ class CustomerDetail extends Form {
 			'name'    => 'siteAddr',
 			'type'    => 'text',
 			'options' => array(
-				'label' => 'Site Address',
+				'column-size'      => 'sm-10',
+				'label'            => 'Site Address',
+				'label_attributes' => array('class' => 'col-sm-2'),
 			),
 		));
 
@@ -45,7 +54,9 @@ class CustomerDetail extends Form {
 			'name'    => 'postCode',
 			'type'    => 'text',
 			'options' => array(
-				'label' => 'Post Code',
+				'column-size'      => 'sm-10',
+				'label'            => 'Post Code',
+				'label_attributes' => array('class' => 'col-sm-2'),
 			),
 		));
 
@@ -53,7 +64,9 @@ class CustomerDetail extends Form {
 			'name'    => 'phone',
 			'type'    => 'text',
 			'options' => array(
-				'label' => 'phone',
+				'column-size'      => 'sm-10',
+				'label'            => 'phone',
+				'label_attributes' => array('class' => 'col-sm-2'),
 			),
 		));
 
@@ -61,7 +74,9 @@ class CustomerDetail extends Form {
 			'name'    => 'mobile',
 			'type'    => 'text',
 			'options' => array(
-				'label' => 'mobile',
+				'column-size'      => 'sm-10',
+				'label'            => 'mobile',
+				'label_attributes' => array('class' => 'col-sm-2'),
 			),
 		));
 
@@ -69,7 +84,9 @@ class CustomerDetail extends Form {
 			'name'    => 'email',
 			'type'    => 'text',
 			'options' => array(
-				'label' => 'email',
+				'column-size'      => 'sm-10',
+				'label'            => 'email',
+				'label_attributes' => array('class' => 'col-sm-2'),
 			),
 		));
 	}

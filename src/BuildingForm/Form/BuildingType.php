@@ -14,6 +14,10 @@ class BuildingType extends Form {
 	const ROOF_DUTCH      = '4';
 	const ROOF_ASSYMETRIC = '5';
 
+	public function __construct() {
+		parent::__construct('building-type');
+	}
+
 	public function setOptionsForBuildingUsage($usageId) {
 		switch ($usageId) {
 		case BuildingUsage::USAGE_DOMESTIC:
@@ -35,9 +39,9 @@ class BuildingType extends Form {
 
 	private function setOptionsForDomesticUsage() {
 		$this->add(array(
-			'type'    => 'select',
-			'name'    => 'typeDomestic',
-			'options' => array(
+			'type'             => 'select',
+			'name'             => 'typeDomestic',
+			'options'          => array(
 				'label'         => 'Select Type of Building',
 				'empty_option'  => 'Select',
 				'value_options' => array(
@@ -47,14 +51,15 @@ class BuildingType extends Form {
 					self::ROOF_DUTCH => "Dutch Roof",
 				),
 			),
+			'label_attributes' => array('class' => 'col-sm-2'),
 		));
 	}
 
 	private function setOptionsForAgriculturalUsage() {
 		$this->add(array(
-			'type'    => 'select',
-			'name'    => 'typeAggricultural',
-			'options' => array(
+			'type'             => 'select',
+			'name'             => 'typeAggricultural',
+			'options'          => array(
 				'label'         => 'Select Type of Building',
 				'empty_option'  => 'Select',
 				'value_options' => array(
@@ -63,14 +68,15 @@ class BuildingType extends Form {
 					self::ROOF_ASSYMETRIC => "Assymetric Roof",
 				),
 			),
+			'label_attributes' => array('class' => 'col-sm-2'),
 		));
 	}
 
 	private function setOptionsForIndustrialUsage() {
 		$this->add(array(
-			'type'    => 'select',
-			'name'    => 'typeIndustrial',
-			'options' => array(
+			'type'             => 'select',
+			'name'             => 'typeIndustrial',
+			'options'          => array(
 				'label'         => 'Select Type of Building',
 				'empty_option'  => 'Select',
 				'value_options' => array(
@@ -79,6 +85,7 @@ class BuildingType extends Form {
 					self::ROOF_ASSYMETRIC => "Assymetric Roof",
 				),
 			),
+			'label_attributes' => array('class' => 'col-sm-2'),
 		));
 	}
 }

@@ -10,7 +10,7 @@ class BuildingUsage extends Form {
 	const USAGE_INDUSTRIAL   = '3';
 
 	public function __construct() {
-		parent::__construct();
+		parent::__construct('building-usage');
 
 		$this->add(array(
 			'type'    => 'radio',

@@ -1,10 +1,10 @@
 <?php
 return array(
-	'controllers' => array(
+	'controllers'   => array(
 		'invokables' => array(
 			'BuildingForm\Index' => 'BuildingForm\Controller\IndexController',
-			)
-		), 
+		),
+	),
 	'router'        => array(
 		'routes' => array(
 			'building-form' => array(
@@ -101,12 +101,14 @@ return array(
 			'BuildingForm\Step\BuildingBay'    => 'BuildingForm\DefaultStep',
 		),
 	),
-	'view_manager' => array(
+	'view_manager'  => array(
 		'template_path_stack' => array(
 			'building-form' => __DIR__ . '/../view',
 		),
-		'template_map' => array(
-			'wizard/layout' => __DIR__ . '/../view/building-form/layout.phtml',
-		)
+		'template_map'        => array(
+			'wizard/layout'  => __DIR__ . '/../view/building-form/layout.phtml',
+			'wizard/header'  => __DIR__ . '/../view/building-form/header.phtml',
+			'wizard/buttons' => __DIR__ . '/../view/building-form/buttons.phtml',
+		),
 	),
 );
